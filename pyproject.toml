@@ -1,0 +1,27 @@
+[tool.pytest.ini_options]
+minversion = "7.0"
+# -rx ao invés de -s abaixo para ignorar a captura de stdout/stderr
+# por conta do teste do exercício 6, que roda o pytest.main()
+addopts = "-vv -rx"
+testpaths = ["tests",]
+accept_xfail = true
+filterwarnings = [
+    'ignore:The hookimpl pytest_testnodedown uses old-st.*:DeprecationWarning',
+]
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''

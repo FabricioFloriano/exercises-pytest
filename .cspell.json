@@ -1,0 +1,8 @@
+{
+    "words": [
+        "conftest",
+        "monkeypatch",
+        "pathlib",
+        "pytestmark"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "MD033": {
+        "allowed_elements": [
+            "details",
+            "summary",
+            "strong",
+            "img"
+        ]
+    },
+    "line-length": false,
+    "ul-indent": false,
+    "MD029": false
+}
