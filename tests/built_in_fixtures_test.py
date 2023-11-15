@@ -23,3 +23,10 @@ def test_capsys(capsys):
     captured = capsys.readouterr()
     assert captured.out == "10\n"
     assert captured.err == ""
+
+
+def test_tmp_path(tmp_path):
+    output_file = tmp_path / "output.txt"
+
+    write_hexadecimal_to_decimal("a", output_file)
+    assert output_file.read_text() == "10"
